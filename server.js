@@ -20,7 +20,7 @@ app.post('/chat', async (req, res) => {
   try {
     const { message } = req.body;
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-5',
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: [{ role: 'user', content: message }]
